@@ -1,12 +1,12 @@
 * {
   color: #fff;
-  font-family: 'Courier New', Courier, monospace;
-
+  font-family: 'Roboto', sans-serif;
 }
 
 body {
   margin: 0;
   padding: 0;
+  overflow: scroll;
 }
 
 .app {
@@ -56,6 +56,10 @@ nav {
   list-style: none;
   padding: 15px 0;
   cursor: pointer;
+  text-align: center;
+  border-radius: 5px;
+  margin-top: 3px;
+  border: solid 0.5px rgba(255, 255, 255, 0.5);
 }
 
 .info {
@@ -71,7 +75,7 @@ nav {
 }
 input {
   font-size: 20px;
-  width: 100%;
+  width: 80%;
   background-color: rgba(255, 255, 255, 0.05);
   border: none;
   padding: 12px 15px;
@@ -97,7 +101,7 @@ input:focus {
 #submit {
   position: absolute;
   bottom: 15px;
-  right: 0;
+  right: 10%;
   cursor: pointer;
 }
 
@@ -110,9 +114,10 @@ input:focus {
 .feed li {
   display: flex;
   background-color: #444654;
-  width: 100%;
+  width: auto;
   padding: 20px;
   margin: 20px 0;
+  word-wrap: break-word;
 }
 
 .feed p {
@@ -123,4 +128,25 @@ input:focus {
 
 .feed p.role {
   min-width: 100px;
+}
+
+@media (max-width: 375px) {
+  input {
+    font-size: 12px;
+  }
+  .history li {
+    font-size: 12px;
+    padding: 10px 0;
+  }
+  .history {
+    margin: 0;
+  }
+  .feed p {
+    font-size: 12px;
+  }
+
+}
+
+@media (max-width: 280px) {
+  
 }
